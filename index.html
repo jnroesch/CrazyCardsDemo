@@ -10,6 +10,9 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebGL.json", {onProgress: UnityProgress});
+	  window.onload = function() {
+      document.getElementsByTagName('canvas')[0].ondragstart = function(event) { event.preventDefault(); return false; };
+      }
     </script>
   </head>
   <body>
